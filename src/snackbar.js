@@ -113,6 +113,11 @@
                 $snackbar.attr("data-content", options.content);
             }
 
+            if (isset(options.action_message)) {
+                $snackbar.append("<span class=snackbtn>" + options.action_message + "</span>");
+                $snackbar.attr("data-action_message", options.action_message);
+            }
+
             if (snackbarNew) {
                 $snackbar.appendTo("#snackbar-container");
             } else {
