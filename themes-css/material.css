@@ -22,21 +22,13 @@
   -moz-transform: none;
   -webkit-transform: none;
   transform: none;
+  display: flex;
+  align-items: center;
 }
 .snackbar.toast {
   border-radius: 200px;
 }
 .snackbtn{
-  background: inherit;
-  display: inline-block;
-  border: none;
-  font-size: inherit;
-  text-transform: uppercase;
   color: #ffeb3b;
-  margin: 0px 0px 0px 15px;
-  min-width: min-content;
-  float: right;
-  padding-left: 24px;
-  padding-right: 24px;
-  width: initial;
+  text-transform: uppercase;
 }
