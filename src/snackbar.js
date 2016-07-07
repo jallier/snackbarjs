@@ -114,7 +114,11 @@
             }
 
             if (isset(options.action_message)) {
-                $snackbar.append("<span class='snackbtn' id='btn-" + options.id + "'>" + options.action_message + "</span>");
+                if ($snackbar.find(".snackbtn").length) {
+                    $snackbar.find(".snackbtn").html(options.action_message);
+                } else {
+                    $snackbar.append("<span class='snackbtn' id='btn-" + options.id + "'>" + options.action_message + "</span>");
+                }
                 $snackbar.attr("data-action_message", options.action_message);
             }
 
@@ -187,6 +191,7 @@
             if (!isset(action) || action === "show" || action === "hide" || action == "toggle") {
                 options = {
                     content: $(this).attr("data-content"),
+                    action_message: $(this).attr("data-action_message"),
                     style: $(this).attr("data-style"),
                     timeout: $(this).attr("data-timeout"),
                     htmlAllowed: $(this).attr("data-html-allowed")
@@ -211,6 +216,7 @@
             options = {
                 id: this.attr("id"),
                 content: $(this).attr("data-content"),
+                action_message: $(this).attr("data-action_message"),
                 style: $(this).attr("data-style"),
                 timeout: parseInt($(this).attr("data-timeout")),
                 htmlAllowed: $(this).attr("data-html-allowed")
