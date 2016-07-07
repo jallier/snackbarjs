@@ -27,7 +27,16 @@
   border-radius: 200px;
 }
 .snackbtn{
-  color: #ffeb3b;
+  background: inherit;
+  display: inline-block;
+  border: none;
+  font-size: inherit;
   text-transform: uppercase;
-  padding-left: 40px;
+  color: #ffeb3b;
+  margin: 0px 0px 0px 15px;
+  min-width: min-content;
+  float: right;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: initial;
 }

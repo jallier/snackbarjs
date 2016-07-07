@@ -65,7 +65,7 @@
                 options.id = "snackbar" + Date.now();
                 $snackbar = $("<div/>").attr("id", options.id).attr("class", "snackbar");
                 snackbarNew = true;
-            } else { //existing snackbar
+            } else {
                 if ($("#" + options.id).length) {
                     $snackbar = $("#" + options.id);
                 } else {
@@ -114,8 +114,16 @@
             }
 
             if (isset(options.action_message)) {
-                $snackbar.append("<span class=snackbtn>" + options.action_message + "</span>");
+                $snackbar.append("<span class='snackbtn' id='btn-" + options.id + "'>" + options.action_message + "</span>");
                 $snackbar.attr("data-action_message", options.action_message);
+            }
+
+            if (isset(options.action_function)) {
+                // This seems like a messy way to do it.
+                $(document)
+                    .on("click", '#btn-' + options.id, function() {
+                        options.action_function();
+                    });
             }
 
             if (snackbarNew) {
