@@ -16,7 +16,7 @@
   height: auto;
   opacity: 1;
 }
-.snackbtn{
+.snackbtn {
   background: inherit;
   display: inline-block;
   border: none;
@@ -42,10 +42,9 @@
     border-radius: 0;
     margin-bottom: 0;
   }
-  .snackbtn{
+  .snackbtn {
     padding-right: 24px;
     padding-left: 10px;
   }
-
 }
 /*# sourceMappingURL=snackbar.css.map */

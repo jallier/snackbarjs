@@ -11,6 +11,8 @@
   -moz-transform: translateY(200%);
   -webkit-transform: translateY(200%);
   transform: translateY(200%);
+  display: flex;
+  align-items: center;
 }
 .snackbar.snackbar-opened {
   padding: 14px 15px;
@@ -22,13 +24,12 @@
   -moz-transform: none;
   -webkit-transform: none;
   transform: none;
-  display: flex;
-  align-items: center;
 }
 .snackbar.toast {
   border-radius: 200px;
 }
-.snackbtn{
+.snackbtn {
   color: #ffeb3b;
   text-transform: uppercase;
+  padding-left: 15px;
 }
